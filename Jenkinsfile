@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Ansible') {
            steps {
-                ansiblePlaybook become: true, credentialsId: 'ansible-root', disableHostKeyChecking: true, installation: 'myansible', inventory: 'hosts', playbook: 'tomcat.yml'
+                ansiblePlaybook become: true, disableHostKeyChecking: true, installation: 'myansible', inventory: 'hosts', playbook: 'tomcat.yml'
           }
         }
     }
